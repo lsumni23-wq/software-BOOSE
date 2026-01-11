@@ -7,12 +7,13 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Property class</div>
+    <div id="PageTitle">Class WhileCommand</div>
     <div id="Contents" />
 
     
- Main WinForms interface for the BOOSE interpreter.
- Provides program editor, drawing canvas, output console and controls.
+ Represents a conditional loop that executes a block of commands
+ repeatedly while the condition evaluates to true.
+ Syntax: while condition ...wend
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -27,7 +28,57 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public partial class Form1 : Form</pre></td></tr></tbody></table>
+    public class WhileCommand : IBOOSECommand</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Remarks
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+
+ The <a href="" >conditionExpression</a> is evaluated before each iteration.
+ The <a href="" >loopBody</a> contains the lines of code to execute in each iteration.
+ Use <a href="" >RunProgram(string)</a> to execute the loop body in the current context.
+ 
+</div>
+</div>
+
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Field string</div>
+    <div id="Contents" />
+
+    
+ The expression that determines whether the loop continues.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    private readonly string conditionExpression</pre></td></tr></tbody></table>
     
     
     
@@ -41,11 +92,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method LoadDefaultProgram</div>
+    <div id="PageTitle">Field IList</div>
     <div id="Contents" />
 
     
- Loads a demonstration BOOSE program into the editor on startup.
+ The list of lines representing the loop body to execute.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +111,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void LoadDefaultProgram()</pre></td></tr></tbody></table>
+    private readonly IList&lt;string&gt; loopBody</pre></td></tr></tbody></table>
     
     
     
@@ -74,11 +125,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method BtnRun_Click</div>
+    <div id="PageTitle">Constructor WhileCommand</div>
     <div id="Contents" />
 
     
- Run button clicked - execute BOOSE program.
+ Initializes a new instance of the <a href="" >WhileCommand</a> class.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -93,9 +144,16 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void BtnRun_Click(object? sender, EventArgs e)</pre></td></tr></tbody></table>
+    public WhileCommand(string conditionExpression, IList&lt;string&gt; loopBody)</pre></td></tr></tbody></table>
     
-    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>conditionExpression</div><div class='ParameterCommentContainer'>
+The conditional expression for the loop.
+</div>
+<div class='CommentParameterName'>loopBody</div><div class='ParameterCommentContainer'>
+The lines of code to execute while the condition is true.
+</div>
+
     
     
     
@@ -107,11 +165,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method BtnClear_Click</div>
+    <div id="PageTitle">Method Execute</div>
     <div id="Contents" />
 
     
- Clear button clicked - reset UI and interpreter state.
+ Executes the while loop in the given <a href="" >BOOSEContext</a>.
+ Evaluates the condition before each iteration and runs the loop body if true.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -126,9 +185,13 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void BtnClear_Click(object? sender, EventArgs e)</pre></td></tr></tbody></table>
+    public void Execute(BOOSEContext context)</pre></td></tr></tbody></table>
     
-    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>context</div><div class='ParameterCommentContainer'>
+The current <a href="" >BOOSEContext</a> containing variables and program state.
+</div>
+
     
     
     

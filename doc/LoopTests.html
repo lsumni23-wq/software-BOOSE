@@ -7,12 +7,11 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Property class</div>
+    <div id="PageTitle">Class LoopTests</div>
     <div id="Contents" />
 
     
- Main WinForms interface for the BOOSE interpreter.
- Provides program editor, drawing canvas, output console and controls.
+ Unit tests for loop constructs including while and for loops.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -27,7 +26,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public partial class Form1 : Form</pre></td></tr></tbody></table>
+    public class LoopTests</pre></td></tr></tbody></table>
     
     
     
@@ -41,11 +40,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method LoadDefaultProgram</div>
+    <div id="PageTitle">Method WhileCommand_LoopsUntilConditionFalse</div>
     <div id="Contents" />
 
     
- Loads a demonstration BOOSE program into the editor on startup.
+ Verifies that a while loop continues executing
+ until the loop condition evaluates to false.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +60,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void LoadDefaultProgram()</pre></td></tr></tbody></table>
+    public void WhileCommand_LoopsUntilConditionFalse()</pre></td></tr></tbody></table>
     
     
     
@@ -74,11 +74,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method BtnRun_Click</div>
+    <div id="PageTitle">Method ForCommand_IteratesAndAccumulates</div>
     <div id="Contents" />
 
     
- Run button clicked - execute BOOSE program.
+ Verifies that a for loop iterates over a range of values
+ and correctly accumulates the result.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -93,7 +94,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void BtnRun_Click(object? sender, EventArgs e)</pre></td></tr></tbody></table>
+    public void ForCommand_IteratesAndAccumulates()</pre></td></tr></tbody></table>
     
     
     
@@ -107,11 +108,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method BtnClear_Click</div>
+    <div id="PageTitle">Method ForCommand_UsesStepCorrectly</div>
     <div id="Contents" />
 
     
- Clear button clicked - reset UI and interpreter state.
+ Verifies that the optional step value in a for loop
+ controls the increment correctly.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -126,7 +128,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void BtnClear_Click(object? sender, EventArgs e)</pre></td></tr></tbody></table>
+    public void ForCommand_UsesStepCorrectly()</pre></td></tr></tbody></table>
     
     
     

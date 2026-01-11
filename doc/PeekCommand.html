@@ -7,14 +7,13 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class PenColourCommand</div>
+    <div id="PageTitle">Class PeekCommand</div>
     <div id="Contents" />
 
     
- Changes the drawing pen colour in the BOOSE interpreter.
- Supports colour names or RGB values.
- Syntax examples:
- <ul><li>pencolour red</li><li>pencolour 255,0,0</li><li>pencolour var1, var2, var3</li></ul>
+ Retrieves a value from an array and stores it in a variable.
+ Syntax: peek var = array index
+ 
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
@@ -28,7 +27,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class PenColourCommand : IBOOSECommand</pre></td></tr></tbody></table>
+    public class PeekCommand : IBOOSECommand</pre></td></tr></tbody></table>
     
     
     
@@ -46,7 +45,7 @@
     <div id="Contents" />
 
     
- The raw argument string specifying the colour (name or RGB components).
+ The name of the variable that will receive the retrieved value.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -61,7 +60,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private readonly string arguments</pre></td></tr></tbody></table>
+    private readonly string targetVar</pre></td></tr></tbody></table>
     
     
     
@@ -75,11 +74,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor PenColourCommand</div>
+    <div id="PageTitle">Field string</div>
     <div id="Contents" />
 
     
- Initializes a new instance of the <a href="" >PenColourCommand</a> class with the specified arguments.
+ The name of the array to retrieve the value from.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -94,11 +93,83 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private PenColourCommand(string arguments)</pre></td></tr></tbody></table>
+    private readonly string arrayName</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Field string</div>
+    <div id="Contents" />
+
+    
+ The expression representing the index within the array.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    private readonly string indexExpression</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Constructor PeekCommand</div>
+    <div id="Contents" />
+
+    
+ Initializes a new instance of the <a href="" >PeekCommand</a> class.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    private PeekCommand(string targetVar, string arrayName, string indexExpression)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>arguments</div><div class='ParameterCommentContainer'>
-The colour argument string.
+<div class='CommentParameterName'>targetVar</div><div class='ParameterCommentContainer'>
+The variable to store the retrieved value.
+</div>
+<div class='CommentParameterName'>arrayName</div><div class='ParameterCommentContainer'>
+The name of the array to read from.
+</div>
+<div class='CommentParameterName'>indexExpression</div><div class='ParameterCommentContainer'>
+The expression that evaluates to the index.
 </div>
 
     
@@ -116,7 +187,7 @@ The colour argument string.
     <div id="Contents" />
 
     
- Parses a "pencolour" command string and returns a <a href="" >PenColourCommand</a> instance.
+ Parses a "peek" command string and returns a <a href="" >PeekCommand</a> instance.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -131,16 +202,16 @@ The colour argument string.
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public static PenColourCommand Parse(string args)</pre></td></tr></tbody></table>
+    public static PeekCommand Parse(string args)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
 <div class='CommentParameterName'>args</div><div class='ParameterCommentContainer'>
-The argument string containing a colour name or RGB components.
+The argument string, expected in the format "var = array index".
 </div>
 
     <div class='CommentHeader'>Return Value</div>
 <div class='ParameterCommentContainer'>
-A <a href="" >PenColourCommand</a> instance with the specified colour arguments.
+A <a href="" >PeekCommand</a> instance with the parsed variable, array, and index expression.
 </div>
 
     
@@ -164,7 +235,7 @@ A <a href="" >PenColourCommand</a> instance with the specified colour arguments.
 <tr>
 <td><span class='PseudoLink'>BOOSEParseException</span></td>
 <td>
- Thrown if the argument string is null, empty, or whitespace.
+ Thrown if the arguments are not in the correct format.
  </td>
 </tr>
 </table
@@ -182,9 +253,8 @@ A <a href="" >PenColourCommand</a> instance with the specified colour arguments.
     <div id="Contents" />
 
     
- Executes the "pencolour" command in the given <a href="" >BOOSEContext</a>.
- Evaluates the arguments and sets <a href="" >PenColour</a>.
- Supports both named colours and RGB values (literal numbers or expressions).
+ Executes the "peek" command in the given <a href="" >BOOSEContext</a>.
+ Evaluates the index expression and retrieves the value from the array, storing it in the target variable.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -203,7 +273,7 @@ A <a href="" >PenColourCommand</a> instance with the specified colour arguments.
     
     <div class='CommentHeader'>Parameters</div>
 <div class='CommentParameterName'>context</div><div class='ParameterCommentContainer'>
-The current <a href="" >BOOSEContext</a> containing variables and pen state.
+The current <a href="" >BOOSEContext</a> containing variables and arrays.
 </div>
 
     
@@ -228,75 +298,8 @@ The current <a href="" >BOOSEContext</a> containing variables and pen state.
 <tr>
 <td><span class='PseudoLink'>BOOSEParseException</span></td>
 <td>
- Thrown if the colour name is unknown, RGB components are out of range, or format is invalid.
+ Thrown if the index is invalid, out of bounds, or the target array does not exist or is not an array.
  </td>
-</tr>
-</table
-</div>
-</div>
-
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method EvaluateColorComponent</div>
-    <div id="Contents" />
-
-    
- Evaluates a single colour component (R, G, or B) from a string or variable expression.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private int EvaluateColorComponent(string input, BOOSEContext context)</pre></td></tr></tbody></table>
-    
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>input</div><div class='ParameterCommentContainer'>
-The input string representing the colour component.
-</div>
-<div class='CommentParameterName'>context</div><div class='ParameterCommentContainer'>
-The current <a href="" >BOOSEContext</a> for variable evaluation.
-</div>
-
-    <div class='CommentHeader'>Return Value</div>
-<div class='ParameterCommentContainer'>
-The integer value of the colour component.
-</div>
-
-    
-    
-    
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>BOOSEParseException</span></td>
-<td>Thrown if the input cannot be evaluated as a number.</td>
 </tr>
 </table
 </div>

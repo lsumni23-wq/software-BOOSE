@@ -7,46 +7,11 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class PenColourCommand</div>
+    <div id="PageTitle">Class MethodTests</div>
     <div id="Contents" />
 
     
- Changes the drawing pen colour in the BOOSE interpreter.
- Supports colour names or RGB values.
- Syntax examples:
- <ul><li>pencolour red</li><li>pencolour 255,0,0</li><li>pencolour var1, var2, var3</li></ul>
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class PenColourCommand : IBOOSECommand</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Field string</div>
-    <div id="Contents" />
-
-    
- The raw argument string specifying the colour (name or RGB components).
+ Unit tests for user-defined methods and method calls.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -61,7 +26,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private readonly string arguments</pre></td></tr></tbody></table>
+    public class MethodTests</pre></td></tr></tbody></table>
     
     
     
@@ -75,11 +40,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor PenColourCommand</div>
+    <div id="PageTitle">Method MethodCommand_ExecutesWithoutErrors</div>
     <div id="Contents" />
 
     
- Initializes a new instance of the <a href="" >PenColourCommand</a> class with the specified arguments.
+ Verifies that a method can be defined and called
+ without throwing any runtime errors.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -94,13 +60,9 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private PenColourCommand(string arguments)</pre></td></tr></tbody></table>
+    public void MethodCommand_ExecutesWithoutErrors()</pre></td></tr></tbody></table>
     
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>arguments</div><div class='ParameterCommentContainer'>
-The colour argument string.
-</div>
-
+    
     
     
     
@@ -112,11 +74,12 @@ The colour argument string.
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Parse</div>
+    <div id="PageTitle">Method MethodScope_DoesNotLeakLocalVariables</div>
     <div id="Contents" />
 
     
- Parses a "pencolour" command string and returns a <a href="" >PenColourCommand</a> instance.
+ Verifies that variables created inside a method
+ do not leak into the global scope.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -131,46 +94,13 @@ The colour argument string.
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public static PenColourCommand Parse(string args)</pre></td></tr></tbody></table>
-    
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>args</div><div class='ParameterCommentContainer'>
-The argument string containing a colour name or RGB components.
-</div>
-
-    <div class='CommentHeader'>Return Value</div>
-<div class='ParameterCommentContainer'>
-A <a href="" >PenColourCommand</a> instance with the specified colour arguments.
-</div>
-
+    public void MethodScope_DoesNotLeakLocalVariables()</pre></td></tr></tbody></table>
     
     
     
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>BOOSEParseException</span></td>
-<td>
- Thrown if the argument string is null, empty, or whitespace.
- </td>
-</tr>
-</table
-</div>
-</div>
-
+    
+    
+    
     
     
 
@@ -178,13 +108,12 @@ A <a href="" >PenColourCommand</a> instance with the specified colour arguments.
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Execute</div>
+    <div id="PageTitle">Method Method_DoesNotModifyGlobalVariable</div>
     <div id="Contents" />
 
     
- Executes the "pencolour" command in the given <a href="" >BOOSEContext</a>.
- Evaluates the arguments and sets <a href="" >PenColour</a>.
- Supports both named colours and RGB values (literal numbers or expressions).
+ Verifies that a method does not overwrite
+ an existing global variable.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -199,42 +128,13 @@ A <a href="" >PenColourCommand</a> instance with the specified colour arguments.
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Execute(BOOSEContext context)</pre></td></tr></tbody></table>
-    
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>context</div><div class='ParameterCommentContainer'>
-The current <a href="" >BOOSEContext</a> containing variables and pen state.
-</div>
-
+    public void Method_DoesNotModifyGlobalVariable()</pre></td></tr></tbody></table>
     
     
     
     
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>BOOSEParseException</span></td>
-<td>
- Thrown if the colour name is unknown, RGB components are out of range, or format is invalid.
- </td>
-</tr>
-</table
-</div>
-</div>
-
+    
+    
     
     
 
@@ -242,11 +142,12 @@ The current <a href="" >BOOSEContext</a> containing variables and pen state.
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method EvaluateColorComponent</div>
+    <div id="PageTitle">Method NestedMethodCalls_DoNotLeakVariables</div>
     <div id="Contents" />
 
     
- Evaluates a single colour component (R, G, or B) from a string or variable expression.
+ Verifies that nested method calls execute correctly
+ and do not leak variables between scopes.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -261,47 +162,47 @@ The current <a href="" >BOOSEContext</a> containing variables and pen state.
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private int EvaluateColorComponent(string input, BOOSEContext context)</pre></td></tr></tbody></table>
+    public void NestedMethodCalls_DoNotLeakVariables()</pre></td></tr></tbody></table>
     
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>input</div><div class='ParameterCommentContainer'>
-The input string representing the colour component.
-</div>
-<div class='CommentParameterName'>context</div><div class='ParameterCommentContainer'>
-The current <a href="" >BOOSEContext</a> for variable evaluation.
+    
+    
+    
+    
+    
+    
+    
+
 </div>
 
-    <div class='CommentHeader'>Return Value</div>
-<div class='ParameterCommentContainer'>
-The integer value of the colour component.
-</div>
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method Method_CanBeCalledMultipleTimes</div>
+    <div id="Contents" />
 
     
-    
-    
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>BOOSEParseException</span></td>
-<td>Thrown if the input cannot be evaluated as a number.</td>
-</tr>
-</table
-</div>
-</div>
+ Verifies that multiple calls to the same method
+ execute independently.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
 
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void Method_CanBeCalledMultipleTimes()</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
     
     
 

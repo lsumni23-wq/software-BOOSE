@@ -11,7 +11,7 @@
     <div id="Contents" />
 
     
- Draws a rectangle at the current pen position.
+ Draws a rectangle in the BOOSE interpreter.
  Syntax: rect width,height
  
         <div id='SectionHeader0' class='SectionHeader'>
@@ -35,6 +35,128 @@
     
     
     
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Remarks
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+
+ The width and height can be numeric literals or expressions evaluated in the current <a href="" >BOOSEContext</a>.
+ The evaluated values are converted to integers before drawing the rectangle.
+ 
+</div>
+</div>
+
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Field string</div>
+    <div id="Contents" />
+
+    
+ The expression representing the rectangle's width.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    private readonly string widthExpression</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Field string</div>
+    <div id="Contents" />
+
+    
+ The expression representing the rectangle's height.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    private readonly string heightExpression</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Constructor RectCommand</div>
+    <div id="Contents" />
+
+    
+ Initializes a new instance of the <a href="" >RectCommand</a> class with width and height expressions.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    private RectCommand(string widthExpr, string heightExpr)</pre></td></tr></tbody></table>
+    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>widthExpr</div><div class='ParameterCommentContainer'>
+The expression for the rectangle's width.
+</div>
+<div class='CommentParameterName'>heightExpr</div><div class='ParameterCommentContainer'>
+The expression for the rectangle's height.
+</div>
+
+    
+    
+    
+    
+    
     
 
 </div>
@@ -45,7 +167,7 @@
     <div id="Contents" />
 
     
- Parse: rect 60,40
+ Parses a "rect" command string and returns a <a href="" >RectCommand</a> instance.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -62,11 +184,44 @@
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
     public static RectCommand Parse(string args)</pre></td></tr></tbody></table>
     
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>args</div><div class='ParameterCommentContainer'>
+The argument string containing width and height separated by a comma.
+</div>
+
+    <div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+A <a href="" >RectCommand</a> instance with parsed width and height expressions.
+</div>
+
     
     
     
-    
-    
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Exceptions
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+<table class='MembersTable'>
+<col width='25%' />
+<col width='75%' />
+<tr>
+<th>Exception</th>
+<th>Condition</th></tr>
+<tr>
+<td><span class='PseudoLink'>BOOSEParseException</span></td>
+<td>
+ Thrown if the argument string does not contain exactly two comma-separated values.
+ </td>
+</tr>
+</table
+</div>
+</div>
+
     
     
 
@@ -78,7 +233,8 @@
     <div id="Contents" />
 
     
- Executes rectangle drawing using BOOSEContext.
+ Executes the "rect" command in the given <a href="" >BOOSEContext</a>.
+ Evaluates the width and height expressions and draws a rectangle.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -95,7 +251,11 @@
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
     public void Execute(BOOSEContext context)</pre></td></tr></tbody></table>
     
-    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>context</div><div class='ParameterCommentContainer'>
+The current <a href="" >BOOSEContext</a> containing the drawing state.
+</div>
+
     
     
     

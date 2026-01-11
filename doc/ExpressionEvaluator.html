@@ -7,11 +7,11 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class BasicDrawingTests</div>
+    <div id="PageTitle">Class ExpressionEvaluator</div>
     <div id="Contents" />
 
     
- Unit tests for basic BOOSE drawing commands.
+ Evaluates expressions using values from the BOOSE context.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -26,7 +26,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class BasicDrawingTests</pre></td></tr></tbody></table>
+    public static class ExpressionEvaluator</pre></td></tr></tbody></table>
     
     
     
@@ -40,13 +40,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method DrawingCommands_DoNotThrowErrors</div>
+    <div id="PageTitle">Method Evaluate</div>
     <div id="Contents" />
 
     
- Verifies that basic drawing commands execute without throwing exceptions.
- This test ensures that moveto, drawto, circle, and rect commands
- are recognised and processed by the interpreter.
+ Evaluates an arithmetic or comparison expression.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -61,7 +59,40 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void DrawingCommands_DoNotThrowErrors()</pre></td></tr></tbody></table>
+    public static object Evaluate(string expressionText, BOOSEContext context)</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method EvaluateCondition</div>
+    <div id="Contents" />
+
+    
+ Evaluates an expression and converts the result to true or false.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\sumne\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public static bool EvaluateCondition(string expressionText, BOOSEContext context)</pre></td></tr></tbody></table>
     
     
     
